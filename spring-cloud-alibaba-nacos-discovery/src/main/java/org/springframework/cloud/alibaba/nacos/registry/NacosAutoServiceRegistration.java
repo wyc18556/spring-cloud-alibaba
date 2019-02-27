@@ -20,22 +20,23 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.cloud.client.serviceregistry.AbstractAutoServiceRegistration;
 import org.springframework.cloud.client.serviceregistry.AutoServiceRegistrationProperties;
+import org.springframework.cloud.client.serviceregistry.Registration;
 import org.springframework.cloud.client.serviceregistry.ServiceRegistry;
 import org.springframework.util.Assert;
 import org.springframework.util.StringUtils;
 
 /**
  * @author xiaojing
+ * @author <a href="mailto:mercyblitz@gmail.com">Mercy</a>
  */
 public class NacosAutoServiceRegistration
-		extends AbstractAutoServiceRegistration<NacosRegistration> {
+		extends AbstractAutoServiceRegistration<Registration> {
 	private static final Logger LOGGER = LoggerFactory
 			.getLogger(NacosAutoServiceRegistration.class);
 
 	private NacosRegistration registration;
 
-	public NacosAutoServiceRegistration(
-			ServiceRegistry<NacosRegistration> serviceRegistry,
+	public NacosAutoServiceRegistration(ServiceRegistry<Registration> serviceRegistry,
 			AutoServiceRegistrationProperties autoServiceRegistrationProperties,
 			NacosRegistration registration) {
 		super(serviceRegistry, autoServiceRegistrationProperties);
