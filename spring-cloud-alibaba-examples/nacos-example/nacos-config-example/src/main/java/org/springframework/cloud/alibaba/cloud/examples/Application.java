@@ -30,10 +30,18 @@ class SampleRunner implements ApplicationRunner {
 	@Value("${user.age}")
 	int userAge;
 
+	@Value("${user.id}")
+	int userId;
+
+	@Value("${user.gender}")
+	String userGender;
+
 	@Override
 	public void run(ApplicationArguments args) throws Exception {
 		System.out.println(userName);
 		System.out.println(userAge);
+		System.out.println(userId);
+		System.out.println(userGender);
 	}
 }
 

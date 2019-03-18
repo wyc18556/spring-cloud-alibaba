@@ -32,6 +32,11 @@ public class ConsumerApplication {
 		SpringApplication.run(ConsumerApplication.class, args);
 	}
 
+	/**
+	 * 使用feign实现伪rpc;
+	 * name:provider app name;
+	 * fallback:服务降级处理类
+	 */
 	@FeignClient(name = "service-provider", fallback = EchoServiceFallback.class, configuration = FeignConfiguration.class)
 	public interface EchoService {
 		@RequestMapping(value = "/echo/{str}", method = RequestMethod.GET)
