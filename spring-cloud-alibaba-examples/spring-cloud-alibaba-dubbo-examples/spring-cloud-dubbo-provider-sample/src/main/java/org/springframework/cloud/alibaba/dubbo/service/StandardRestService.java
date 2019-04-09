@@ -41,8 +41,8 @@ import static org.springframework.util.MimeTypeUtils.APPLICATION_JSON_VALUE;
  *
  * @author <a href="mailto:mercyblitz@gmail.com">Mercy</a>
  */
-@Service(version = "1.0.0", protocol = {"dubbo", "rest"})
-@Path("/")
+@Service(version = "1.0.0", protocol = {"dubbo", "rest"}, interfaceClass = RestService.class)
+@Path("/test")
 public class StandardRestService implements RestService {
 
     private Logger logger = LoggerFactory.getLogger(getClass());

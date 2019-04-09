@@ -32,7 +32,7 @@ public class SentinelDubboConsumerApp {
 		flowRule.setCount(10);
 		flowRule.setGrade(RuleConstant.FLOW_GRADE_QPS);
 		flowRule.setLimitApp("default");
-		FlowRuleManager.loadRules(Collections.singletonList(flowRule));
+		FlowRuleManager.loadRules(Collections.singletonList(flowRule)) ;
 
 		SpringApplicationBuilder consumerBuilder = new SpringApplicationBuilder();
 		ApplicationContext applicationContext = consumerBuilder
